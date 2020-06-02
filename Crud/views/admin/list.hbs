@@ -1,0 +1,30 @@
+<h1><a class="btn btn-secondary"href="/AddorEdit">Create New</a class>Movie list</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Movie Name</th>
+      <th>date</th>
+      <th>time</th>
+      <th>type</th>
+      <th>trailer</th>
+      {{!-- <th>image</th> --}}
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td>{{this.moviename}}</td>
+      <td>{{this.date}}</td>
+      <td>{{this.time}}</td>
+      <td>{{this.type}}</td>
+      <td>{{this.trailer}}</td>
+      {{!-- <td>{{this.image}}</td> --}}
+      <td><a href="/edit/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+          <a href="/delete/{{this._id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+

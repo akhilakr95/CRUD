@@ -1,0 +1,42 @@
+<h3>{{viewtitle}}</h3>
+
+    <form action="/edit/{{data._id}}"method="POST" autocomplete="off">
+     <input type="hidden" name="_id" value="{{data._id}}">
+        <h1> MOVIE</h1>
+            <div class="form-group">
+                <label >Movie Name</label>
+                <input type="text" name="moviename" class="form-control"placeholder="movie name"value="{{data.moviename}}">
+            </div>
+            <div class="form-group">
+                <label >Date</label>  
+                <input type="date" id="date" name="date"value="{{data.date}}">
+            </div>
+            <div class="form-group">
+                <label >Time</label>
+                <input type="time" id="appt" name="time"value="{{data.time}}">
+            </div>
+            
+            <div >
+                 <label >Type</label>
+                    <select class="form-group" name="type"value="{{data.type}}">
+                        <option>2D </option>
+                        <option>3D </option>
+                        <option> other</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label >Trailer</label>
+                <input type="text"id="tr" name="trailer" class="form-control"value="{{data.trailer}}">
+            </div>
+            {{!-- <div class="form-group">
+                <label>Image</label>
+                <input type="image"id="image" name="image" class="form-control"value=" {{data.image}}">
+            </div> --}}
+            <div>
+                <button type="submit" class="btn btn-primary">submit </button >
+            </div>
+          
+          
+    </form>
+    
